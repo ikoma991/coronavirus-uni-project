@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Corona Virus Information</title>
+</head>
+<body >
+    <div class="bg"></div>
+    <div class="structure">
+        <div class="container">
+
+
+
+                <!-- <img src="./assets/img/covid19 structure.png" alt="Structure of Covid19" class="structure-pic"> -->
+                <div class="img-container">
+                    <h1 style="color:black ;">Structure of Covid-19 Virus</h1>
+                    <p style="color:black;font-weight: bold;" class="text-center">Click on different areas of virus to play audio. </p>
+                    <img src="./assets/img/jad-77-jad200831-g001.png" usemap="#image-map" id="covid19">
+                    
+                   <map name="image-map">
+                    <area target="" alt="Spike Glycoprotein(S)" title="Spike Glycoprotein(S)" href="" coords="587,3,407,5,345,115,356,123,403,89,426,23,585,23" shape="poly" id="spike">
+                    <area target="" alt="Membrane Protein(M)" title="Membrane Protein(M)" href="" coords="365,137,439,66,650,63,650,83,445,80,381,160" shape="poly" id="membrane">
+                    <area target="" alt="Envelope Protein(E)" title="Envelope Protein(E)" href="" coords="403,183,439,171,528,133,708,125,702,148,536,150,403,192" shape="poly" id="envelope">
+                    <area target="" alt="Hemagglutinin-Esterase(HE)" title="Hemagglutinin-Esterase(HE)" href="" coords="467,245,533,197,737,182,737,218,532,216,472,257,401,249" shape="poly" id="hema">
+                    <area target="" alt="Nucleoprotein(N)" title="Nucleoprotein" href="" coords="337,254,689,251,695,282,335,267" shape="poly" id="nucleo">
+                    <area target="" alt="Viral RNA" title="Viral RNA" href="" coords="475,338,564,318,572,349,448,361,286,300,301,270,360,297" shape="poly" id="rna">
+                </map>
+                <div class="text-center" style="margin-top:1em ;margin-bottom:1em;">
+                    <a href="index.html" class="btn-brown">Go To Homepage</a>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<script src="assets/js/gsap.js"></script>
+
+
+
+</body>
+
+<script>
+ const spike = document.getElementById('spike');
+ const membrane = document.getElementById('membrane');
+ const envelope = document.getElementById('envelope');
+ const hema = document.getElementById('hema');
+ const nucleo = document.getElementById('nucleo');
+ const rna = document.getElementById('rna'); 
+ const audio = new Audio();
+
+ 
+ spike.addEventListener('click',(e)=>{
+     audio.src = './assets/sounds/spikeprotein.mp3';
+     audio.play();
+     e.preventDefault();
+ });
+
+ membrane.addEventListener('click',(e)=>{
+    e.preventDefault();
+    audio.src = './assets/sounds/membrane.mp3';
+    audio.play();
+ });
+ envelope.addEventListener('click',(e)=>{
+    e.preventDefault();
+    audio.src = './assets/sounds/envelope.mp3';
+    audio.play();
+ });
+ hema.addEventListener('click',(e)=>{
+    e.preventDefault();
+    audio.src = './assets/sounds/hemagglutinin.mp3';
+    audio.play();
+ });
+ nucleo.addEventListener('click',(e)=>{
+    e.preventDefault();
+    audio.src = './assets/sounds/nucleoprotein.mp3';
+    audio.play();
+ });
+ rna.addEventListener('click',(e)=>{
+    e.preventDefault();
+    audio.src = './assets/sounds/Rna.mp3';
+    audio.play();
+ });
+
+
+ 
+
+</script>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>About | Corona Virus Information</title>
+</head>
+<body>
+    
+    <div class="bg"></div>
+    <div class="about">
+        <audio src="./assets/sounds/about.mp3" id ="audioabout" ></audio>
+        
+        <div class="container">
+             <h1>About CoronaVirus</h1>
+             <div style="text-align:right;margin-right:1em">
+                 <a href="#" class="btn-brown" id="audiocontrol">Stop Audio</a>
+             </div>
+             <div class = "about-section">
+                <div class="dp-inline-block">
+
+                    <h2 class="typed-out-head typed-out-head1">What is coronavirus?</h2>
+                </div>
+                <div >
+                <p class="typed-out-para typed-out-p1">
+                                    Coronaviruses are a family of viruses that can cause respiratory illness in humans. They are called “corona” because of crown-like spikes on the surface of the virus. Severe acute respiratory syndrome (SARS), Middle East respiratory syndrome (MERS) and the common cold are examples of coronaviruses that cause illness in humans.
+
+                The new strain of coronavirus SARS-CoV-2 was first reported in Wuhan, China in December 2019. It has since spread to every country around the world.
+                                </p>
+                </div>
+                
+            </div>
+             <div class = "about-section">
+                <div class="dp-inline-block">
+                    <h2 class="typed-out-head typed-out-head2">Where do coronaviruses come from?</h2>
+                </div>
+                <div>
+                    <p class="typed-out-para typed-out-p2">
+                        Coronaviruses are often found in bats, cats and camels. The viruses live in but don’t infect the animals. Sometimes these viruses then spread to different animal species. The viruses may change (mutate) as they transfer to other species. Eventually, the virus can jump from animal species and begin to infect humans. In the case of SARS-CoV-19, the first people infected are thought to have contracted the virus at a food market that sold meat, fish and live animals.
+                    </p>
+                </div>
+            </div>
+             <div class = "about-section">
+                <div class="dp-inline-block">
+                    <h2 class="typed-out-head typed-out-head3">How do you get COVID-19?</h2>
+                </div>
+                <div >
+
+                    <p class="typed-out-para typed-out-p3">
+                        SARS-CoV-2, the virus that causes COVID-19, enters your body through your mouth, nose or eyes (directly from the airborne droplets or from the transfer of the virus from your hands to your face). It then travels to the back of your nasal passages and mucous membrane in the back of your throat. It attaches to cells there, begins to multiply and moves into lung tissue. From there, the virus can spread to other body tissues.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-bottom:1em">
+                <a href="index.html" class="btn-brown">Go to Homepage </a>
+                <a href="structure.html" class="btn-brown">Go to Structure </a>
+            </div>
+        </div>
+        
+    </div>
+
+
+</body>
+
+<script src="assets/js/gsap.js"></script>
+<script >
+
+    window.onload = function() {
+        const aboutSound = document.getElementById("audioabout");
+        const audioControl = document.getElementById("audiocontrol");
+        
+
+        audioControl.addEventListener('click',()=> {
+            console.log(aboutSound.paused);
+            if(aboutSound.paused){
+                audioControl.innerText = "Stop Audio";
+                aboutSound.play();
+                for(let i = 0;i<3;i++){
+                    const heading = document.getElementsByTagName('h2')[i];
+                    const para =  document.getElementsByTagName('p')[i];
+                    heading.classList.add('typed-out-head'+(i+1));
+                    para.classList.add('typed-out-p'+(i+1));
+                    const durationHeading = parseFloat(getComputedStyle( heading).animationDelay.split('s')[0]);
+                    const durationPara = parseFloat(getComputedStyle( para).animationDelay.split('s')[0]) ;
+                    const newDurationPara = (durationPara-3.2);
+                    const newDurationHeading = (durationHeading -3.2);
+                    heading.style.animationDelay = newDurationHeading.toFixed(1) + 's';
+                    para.style.animationDelay = newDurationPara.toFixed(1) + 's';
+                    
+                }
+            }else {
+                audioControl.innerText = "Play Audio";
+                aboutSound.pause();
+                aboutSound.currentTime=0;
+                for(let i = 0;i<3;i++){
+                    const heading = document.getElementsByTagName('h2')[i]; 
+                    const para = document.getElementsByTagName('p')[i];
+                    heading.classList.remove('typed-out-head'+(i+1));
+                    para.classList.remove('typed-out-p'+(i+1));
+                    heading.style.removeProperty('animation');
+                    para.style.removeProperty('animation');
+                }
+
+                
+            }
+        })
+        setTimeout(() => {
+            aboutSound.play();
+        }, 3000);
+        
+
+    }
+
+    
+</script>
+
+</body>
+</html>

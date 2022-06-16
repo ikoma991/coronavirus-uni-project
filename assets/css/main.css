@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display';
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+}
+
+.bg {
+  height: 100vh;
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+}
+
+svg {
+  width: 1em;
+  margin: 2em auto;
+  display: block;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.about .container {
+  place-content: initial;
+  background: linear-gradient(45deg, black, transparent);
+}
+
+.about h1 {
+  text-transform: uppercase;
+}
+
+.about h2 {
+  text-transform: capitalize;
+}
+
+.btn-brown {
+  color: #fff;
+  padding: .5em 1em;
+  display: inline-block;
+  background-color: brown;
+}
+
+.btn-brown:hover {
+  color: black;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.container h2 {
+  color: #fff;
+}
+
+.container h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.container p {
+  color: #fff;
+}
+
+.about-section {
+  padding: 0em 3em;
+}
+
+.content {
+  color: white;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.content p {
+  font-size: 1.3rem;
+}
+
+.content .text-reveal {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  -webkit-transform: translateY(-3em);
+          transform: translateY(-3em);
+}
+
+.sections-container {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+}
+
+.sections-container .info {
+  background: white;
+  padding: 3em;
+  position: relative;
+  margin-top: -.5em;
+}
+
+.sections-container .info .title {
+  font-size: 2rem;
+  margin-top: -5.5em;
+  margin-bottom: 2.5em;
+  font-weight: bold;
+  color: white;
+}
+
+.sections-container .info .title span {
+  display: block;
+}
+
+.local {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  opacity: 0;
+  -webkit-transform: translateY(2em);
+          transform: translateY(2em);
+  width: 45%;
+}
+
+.local img {
+  width: 100%;
+  height: 15em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+a:hover {
+  color: grey;
+}
+
+.op-0 {
+  opacity: 0;
+}
+
+.dp-inline-block {
+  display: inline-block;
+}
+
+.typed-out-head {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  width: 0;
+}
+
+.typed-out-para {
+  overflow: hidden;
+  opacity: 0;
+}
+
+.typed-out-head1 {
+  -webkit-animation: typing 0.7s steps(20, end) forwards;
+          animation: typing 0.7s steps(20, end) forwards;
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+}
+
+.typed-out-p1 {
+  -webkit-animation: hidden 3.3s forwards;
+          animation: hidden 3.3s forwards;
+  -webkit-animation-delay: 4000ms;
+          animation-delay: 4000ms;
+}
+
+.typed-out-head2 {
+  -webkit-animation: typing 0.7s steps(20, end) forwards;
+          animation: typing 0.7s steps(20, end) forwards;
+  -webkit-animation-delay: 33.2s;
+          animation-delay: 33.2s;
+}
+
+.typed-out-p2 {
+  -webkit-animation: hidden 3.3s forwards;
+          animation: hidden 3.3s forwards;
+  -webkit-animation-delay: 34.2s;
+          animation-delay: 34.2s;
+}
+
+.typed-out-head3 {
+  -webkit-animation: typing 0.7s steps(20, end) forwards;
+          animation: typing 0.7s steps(20, end) forwards;
+  -webkit-animation-delay: 63.2s;
+          animation-delay: 63.2s;
+}
+
+.typed-out-p3 {
+  -webkit-animation: hidden 3.3s forwards;
+          animation: hidden 3.3s forwards;
+  -webkit-animation-delay: 64.2s;
+          animation-delay: 64.2s;
+}
+
+@-webkit-keyframes hidden {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hidden {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.structure .container {
+  background: linear-gradient(45deg, black, transparent);
+}
+
+.structure-pic {
+  -webkit-filter: drop-shadow(2px 4px 6px black) brightness(0.9);
+          filter: drop-shadow(2px 4px 6px black) brightness(0.9);
+}
+
+.img-container {
+  background: #ffffffad;
+  border-radius: 26px;
+  padding: 0 4em;
+}
+/*# sourceMappingURL=main.css.map */
