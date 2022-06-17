@@ -1,3 +1,4 @@
 # coronavirus-uni-project
 Project of Multimedia and Design
-https://github.com/ikoma991/coronavirus-uni-project
+
+https://ikoma991.github.io/coronavirus-uni-project/
